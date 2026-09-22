@@ -1,0 +1,21 @@
+# Gamble Plugin Configuration
+
+# How often (in seconds) a gambling player receives a payment.
+interval-seconds: 5
+
+# Amount range. The amount is always a whole multiple of "amount-step"
+# between "min-amount" and "max-amount" (inclusive), so no decimal
+# values are ever generated.
+min-amount: 50000000
+max-amount: 1000000000
+amount-step: 10000000
+
+# Placeholders: {name} = fake player name, {amount} = formatted amount (e.g. 250m)
+# MiniMessage format is supported.
+payment-message: "<gray>{name} paid you <green>$ {amount}"
+
+messages:
+  enabled: "<green>Gamble aktiviert!"
+  disabled: "<red>Gamble deaktiviert!"
+  no-economy: "<red>Keine Vault Economy gefunden."
+  player-only: "<red>Dieser Befehl kann nur von einem Spieler verwendet werden."

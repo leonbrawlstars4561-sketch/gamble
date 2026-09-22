@@ -1,0 +1,19 @@
+name: Gamble
+version: '${project.version}'
+main: de.gamble.plugin.GamblePlugin
+api-version: '1.21'
+author: Gamble
+description: Periodically pays the player fake "gifts" backed by real Vault economy money.
+
+depend: [Vault]
+
+commands:
+  gamble:
+    description: Toggles the Gamble payment loop for yourself.
+    usage: /gamble
+    permission: gamble.use
+
+permissions:
+  gamble.use:
+    description: Allows the player to use /gamble
+    default: true
